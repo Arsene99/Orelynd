@@ -1,0 +1,12 @@
+{
+  "models": [
+    {
+      "title": "Mistral (local)",
+      "model": "mistral",
+      "provider": "ollama"
+    }
+  ],
+  "defaultModel": "Mistral (local)",
+  "temperature": 0.7,
+  "maxTokens": 2048
+}

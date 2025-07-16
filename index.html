@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Orelynd - Produits artisanaux</title>
+    <meta name="description" content="Découvrez notre sélection de produits vestimentaires de qualité pour améliorer votre style quotidien.">
+    <!-- Font Awesome pour les icônes -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+   <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo">Orelynd</div>
+            <ul class="nav-links">
+                <li><a href="#accueil">Accueil</a></li>
+                <li><a href="#produits">Produits</a></li>
+                <li><a href="#categories">Catégories</a></li>
+                <li><a href="#avis">Avis Clients</a></li>
+                <li><a href="#a propos">A Propos</a></li>
+            </ul>
+
+            <div class="nav-right">
+                <a href="https://wa.me/qr/45QJNPZ5B56FD1" class="contact-icon" title="Contactez-nous sur WhatsApp">
+                    <i class="fab fa-whatsapp"></i>
+                </a>
+                <div class="mobile-menu-icon" id="mobile-menu-toggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Menu mobile qui s'affichera au clic -->
+        <div class="mobile-nav" id="mobile-nav">
+            <ul class="mobile-nav-links">
+                <li><a href="#accueil">Accueil</a></li>
+                <li><a href="#produits">Produits</a></li>
+                <li><a href="#categories">Catégories</a></li>
+                <li><a href="#avis">Avis Clients</a></li>
+                <li><a href="#a propos">A Propos</a></li>
+            </ul>
+            <div class="mobile-social-links">
+                <a href="https://wa.me/qr/45QJNPZ5B56FD1" class="mobile-social-icon" title="WhatsApp" target="_blank">
+                    <i class="fab fa-whatsapp"></i>
+                </a>
+                <a href="https://www.facebook.com/profile.php?id=61578332972862" class="mobile-social-icon" title="Facebook" target="_blank">
+                    <i class="fab fa-facebook-f"></i>
+                </a>
+                <a href="https://x.com/orelynd?t=aONEJTO_rAIXY-mfZKb_tw&s=09" class="mobile-social-icon" title="Twitter" target="_blank">
+                    <i class="fab fa-twitter"></i>
+                </a>
+                <a href="https://www.instagram.com/orelynd13?igsh=am0wem50OXhxNHjk" class="mobile-social-icon" title="Instagram" target="_blank">
+                    <i class="fab fa-instagram"></i>
+                </a>
+                <a href="https://www.linkedin.com/in/orelynd-net-aa6941374?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" class="mobile-social-icon" title="LinkedIn" target="_blank">
+                    <i class="fab fa-linkedin-in"></i>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <section class="hero" id="accueil">
+        <div class="hero-content">
+            <h1><span>D</span>écouvrez l'authenticité de l'artisanat béninois</h1>
+            <p> Nos produits locaux, artisanaux et transformés</p>
+            <a href="#produits" class="btn">Voir les produits</a>
+        </div>
+    </section>
+
+    <section class="categories" id="categories">
+        <h2 class="section-title fade-in">Nos Catégories</h2>
+        <div class="category-grid">
+            <div class="category-card fade-in">
+                <div class="category-img">
+                    <img src="catégories/bracelet.jfif" alt="Bracelets">
+                </div>
+                <div class="category-info">
+                    <h3>Bracelets</h3>
+                </div>
+            </div>
+            <div class="category-card fade-in">
+                <div class="category-img">
+                    <img src="catégories/vase2.jfif" alt="Décoration">
+                </div>
+                <div class="category-info">
+                    <h3>Décoration</h3>
+                </div>
+            </div>
+            <div class="category-card fade-in">
+                <div class="category-img">
+                    <img src="catégories/sac blanc-marron.jpg" alt="sacs">
+                </div>
+                <div class="category-info">
+                    <h3>Sacs</h3>
+                </div>
+            </div>
+            <div class="category-card fade-in">
+                <div class="category-img">
+                    <img src="catégories/chaussures.png" alt="Chaussures">
+                </div>
+                <div class="category-info">
+                    <h3>Chaussures</h3>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="featured-products" id="produits">
+        <h2 class="section-title fade-in">Produits Populaires</h2>
+        <div class="products-grid">
+            <!-- Produit 1 -->
+            <div class="product-card fade-in">
+                <span class="product-badge">Nouveau</span>
+                <div class="product-img">
+                    <img src="produits/sandales.png" alt="Sandales à perles" class="product-image">
+                </div>
+                <div class="product-info">
+                    <h3>Sandales</h3>
+                    <p>Sandales à perles pour femmes</p>
+                    <div class="product-price">
+                        <span class="old-price"></span> 4000f CFA
+                    </div>
+                    <div class="product-actions">
+                        <a href="https://wa.me/qr/45QJNPZ5B56FD1?text=Je%20suis%20intéressé%20par%20les%20Sandales%20à%20perles%0A%0ADescription:%20Sandales%20à%20perles%20pour%20femmes%0A%0APrix:%204000f%20CFA%0A%0AVoir%20le%20produit:%20https://orelynd.com/produits/sandales.png" 
+                           class="whatsapp-btn" target="_blank">
+                            <i class="fab fa-whatsapp"></i> Commander
+                        </a>
+                        <a href="https://www.facebook.com/profile.php?id=61578332972862" class="facebook-btn" target="_blank">
+                            <i class="fab fa-facebook-f"></i> Voir
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Produit 2 -->
+            <div class="product-card fade-in">
+                <span class="product-badge">Promo</span>
+                <div class="product-img">
+                    <img src="produits/sac.png" alt="sac à perles" class="product-image">
+                </div>
+                <div class="product-info">
+                    <h3>Sac à perles bicolore</h3>
+                    <p>Un sac attrayant et léger. Il est adapté à toutes les occasions.</p>
+                    <div class="product-price">
+                        <span class="old-price">3500f CFA</span> 3000F CFA
+                    </div>
+                    <div class="product-actions">
+                        <a href="https://wa.me/qr/45QJNPZ5B56FD1?text=Je%20suis%20intéressé%20par%20le%20Sac%20à%20perles%20bicolore%0A%0ADescription:%20Un%20sac%20attrayant%20et%20léger%20adapté%20à%20toutes%20les%20occasions%0A%0APrix:%203000F%20CFA%20(promo)%0A%0AVoir%20le%20produit:%20https://orelynd.com/produits/sac.png" 
+                           class="whatsapp-btn" target="_blank">
+                            <i class="fab fa-whatsapp"></i> Commander
+                        </a>
+                        <a href="https://www.facebook.com/profile.php?id=61578332972862" class="facebook-btn" target="_blank">
+                            <i class="fab fa-facebook-f"></i> Voir
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Produit 3 -->
+            <div class="product-card fade-in">
+                <div class="product-img">
+                    <img src="produits/c3.png" alt="couvertures de cahier" class="product-image">
+                </div>
+                <div class="product-info">
+                    <h3>cartonnage et couverture de cahiers</h3>
+                    <p>Personnalisez vos cahiers et livres selon vos préférences.</p>
+                    <div class="product-price">2500f CFA</div>
+                    <div class="product-actions">
+                        <a href="https://wa.me/qr/45QJNPZ5B56FD1?text=Je%20suis%20intéressé%20par%20le%20Sac%20stylisé%20bicolore%0A%0ADescription:%20Sac%20avec%20option%20de%20bijoux%20complémentaires%0A%0APrix:%202500f%20CFA%0A%0AVoir%20le%20produit:%20https://orelynd.com/produits/sac%20blanc-marron.jpg" 
+                           class="whatsapp-btn" target="_blank">
+                            <i class="fab fa-whatsapp"></i> Commander
+                        </a>
+                        <a href="https://www.facebook.com/profile.php?id=61578332972862" class="facebook-btn" target="_blank">
+                            <i class="fab fa-facebook-f"></i> Voir
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Produit 4 -->
+            <div class="product-card fade-in">
+                <span class="product-badge">Promo</span>
+                <div class="product-img">
+                    <img src="produits/bracelet3.png" alt="Montre électronique" class="product-image">
+                </div>
+                <div class="product-info">
+                    <h3>Bracelet à perles</h3>
+                    <p>Hommes comme femmes, ce bracelet vous conviendra sans doute.</p>
+                    <div class="product-price">
+                        <span class="old-price">2000f CFA</span> 1500f CFA
+                    </div>
+                    <div class="product-actions">
+                        <a href="https://wa.me/qr/45QJNPZ5B56FD1?text=Je%20suis%20intéressé%20par%20le%20Bracelet%20à%20perles%0A%0ADescription:%20Bracelet%20unisexe%20en%20perles%0A%0APrix:%201500f%20CFA%20(promo)%0A%0AVoir%20le%20produit:%20https://orelynd.com/watcht.png" 
+                           class="whatsapp-btn" target="_blank">
+                            <i class="fab fa-whatsapp"></i> Commander
+                        </a>
+                        <a href="https://www.facebook.com/profile.php?id=61578332972862" class="facebook-btn" target="_blank">
+                            <i class="fab fa-facebook-f"></i> Voir
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="testimonials" id="avis">
+        <h2 class="section-title fade-in">Ce que disent nos clients</h2>
+        <div class="testimonial-slider">
+            <div class="testimonial-slides" id="testimonial-slides">
+                <div class="testimonial-slide fade-in">
+                    <div class="testimonial-content">
+                        <p class="testimonial-text">J'adore la qualité des tissus. Mon pagne tissé est magnifique et a fait sensation !"</p>
+                        <div class="customer-info">
+                            <div class="customer-img">
+                                <img src="commentaires/commentaire.webp" alt="Marie S.">
+                            </div>
+                            <div class="customer-details">
+                                <h4>Marie S.</h4>
+                                <p>Entrepreneuse</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-slide fade-in">
+                    <div class="testimonial-content">
+                        <p class="testimonial-text">Les chaussures vendues ici sont de très bonne qualité et à des prix compétitifs. Je recommande vivement cette boutique en ligne !</p>
+                        <div class="customer-info">
+                            <div class="customer-img">
+                                <img src="commentaires/commentaire.webp" alt="Jean K.">
+                            </div>
+                            <div class="customer-details">
+                                <h4>Jean K.</h4>
+                                <p>Enseignant</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-slide fade-in">
+                    <div class="testimonial-content">
+                        <p class="testimonial-text">Service client exceptionnel ! J'ai eu un problème avec ma commande et ils ont tout résolu rapidement. Je reviendrai certainement faire mes achats ici.</p>
+                        <div class="customer-info">
+                            <div class="customer-img">
+                                <img src="commentaires/commentaire.webp" alt="Fatou B.">
+                            </div>
+                            <div class="customer-details">
+                                <h4>Fatou B.</h4>
+                                <p>Styliste</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="testimonial-dots">
+            <div class="dot active" data-slide="0"></div>
+            <div class="dot" data-slide="1"></div>
+            <div class="dot" data-slide="2"></div>
+        </div>
+    </section>
+
+    <section class="presentation" id="a propos">
+        <h2 class="fade-in">Orelynd - Vente de produits artisanaux</h2>
+        <div class="presentation-container">
+            <div class="presentation-block fade-in">
+                <div class="presentation-text">
+                    <h3>Notre engagement</h3>
+                    <p>Chez Orelynd, nous nous engageons à promouvoir l'artisanat béninois en offrant des produits de qualité, fabriqués avec soin par des artisans locaux. Chaque pièce que nous proposons raconte une histoire et reflète le riche patrimoine culturel de notre pays.</p>
+                </div>
+                <div class="presentation-image">
+                    <img src="A propos/3.jfif" alt="Artisanat béninois">
+                </div>
+            </div>
+            
+            <div class="presentation-block fade-in reverse">
+                <div class="presentation-text">
+                    <h3>Nos matériaux</h3>
+                    <p>Nous utilisons exclusivement des matériaux naturels et locaux pour la création de nos produits. Perles, tissus traditionnels, bois et cuir sont soigneusement sélectionnés pour leur qualité et leur authenticité.</p>
+                </div>
+                <div class="presentation-image">
+                    <img src="A propos/2.jfif" alt="Matériaux artisanaux">
+                </div>
+            </div>
+            
+            <div class="presentation-block fade-in">
+                <div class="presentation-text">
+                    <h3>Notre vision</h3>
+                    <p>Notre objectif est de faire connaître l'artisanat béninois à travers le monde tout en soutenant les artisans locaux. En achetant chez Orelynd, vous participez directement au développement économique de nos communautés artisanales.</p>
+                </div>
+                <div class="presentation-image">
+                    <img src="A propos/1.jfif" alt="Vision Orelynd">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-column">
+                <h3>À propos</h3>
+                <p>Orelynd est votre boutique en ligne pour des produits artisanaux béninois authentiques et de qualité.</p>
+            </div>
+            <div class="footer-column">
+                <h3>Liens utiles</h3>
+                <ul class="footer-links">
+                    <li><a href="#accueil">Accueil</a></li>
+                    <li><a href="#produits">Produits</a></li>
+                    <li><a href="#categories">Catégories</a></li>
+                    <li><a href="#avis">Avis Clients</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>Contact</h3>
+                <p><a href="mailto:Orelynd@gmail.com" style="color: white; text-decoration: none;">Email: Orelynd@gmail.com</a></p>
+                <p><a href="tel:+22959173277" style="color: white; text-decoration: none;">Téléphone: +229 59 17 32 77</a></p>
+                <div class="social-links">
+                    <a href="https://wa.me/qr/45QJNPZ5B56FD1" class="social-icon whatsapp-icon" title="WhatsApp" target="_blank">
+                        <i class="fab fa-whatsapp"></i>
+                    </a>
+                    <a href="https://www.facebook.com/profile.php?id=61578332972862" class="social-icon facebook-icon" title="Facebook" target="_blank">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                    <a href="https://x.com/orelynd?t=aONEJTO_rAIXY-mfZKb_tw&s=09" class="social-icon twitter-icon" title="Twitter" target="_blank">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                    <a href="https://www.instagram.com/orelynd13?igsh=am0wem50OXhxNHjk" class="social-icon instagram-icon" title="Instagram" target="_blank">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/in/orelynd-net-aa6941374?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" class="social-icon linkedin-icon" title="LinkedIn" target="_blank">
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            &copy; 2025 Orelynd. Tous droits réservés.
+        </div>
+    </footer>
+
+   <script src="script.js"></script>
+</body>
+</html>
