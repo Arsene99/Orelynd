@@ -52,7 +52,7 @@
     }
 
     .navbar.scrolled {
-        background:#0500002f;
+       background: rgba(255, 255, 255, 0.25); /* Blanc légèrement transparent */
         backdrop-filter: blur(10px);
     }
 
@@ -183,8 +183,7 @@
     left: 0;
     width: 100%;
     height: calc(100vh - 70px);
-    background: #0500002f;
-    backdrop-filter: blur(12px);
+    background: #d10024; /* Rouge par défaut (même couleur que la navbar non scrollée) */
     overflow: hidden;
     transition: all 0.5s ease-out;
     max-height: 0;
@@ -194,15 +193,18 @@
     align-items: center;
     transform-origin: top;
     transform: scaleY(0);
-	animation: slideDown 0.5s ease-out forwards;
+    animation: slideDown 0.5s ease-out forwards;
 }
-
 .mobile-nav.active {
     max-height: calc(100vh - 70px);
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
     display: flex;
     transform: scaleY(1);
     animation: slideDown 0.5s ease-out forwards;
+}
+.navbar.scrolled ~ .mobile-nav.active {
+    background: rgba(255, 255, 255, 0.25); /* Même opacité que la navbar */
+    backdrop-filter: blur(12px);
 }
 
 @keyframes slideDown {
@@ -242,33 +244,107 @@
     }
 
     .mobile-nav-links a {
-        color: white;
-        text-decoration: none;
-        font-weight: 500;
-        font-size: 1.5rem;
-        transition: var(--transition-speed);
-    }
+    position: relative; /* Nécessaire pour le pseudo-élément */
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 1.5rem;
+    transition: var(--transition-speed);
+}
+.mobile-nav-links a:hover {
+    color: white; /* Garde la même couleur au survol */
+}
+.mobile-nav-links a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: -5px;
+    left: 0;
+    background-color: currentColor; /* Utilise la couleur actuelle du texte */
+    transition: var(--transition-speed);
+}
+.mobile-nav-links a:hover::after {
+    width: 100%;
+}
+/* Pour la version scrollée (navbar transparente) */
+.navbar.scrolled ~ .mobile-nav .mobile-nav-links a {
+    color: var(--secondary-color); /* Couleur quand scrollé */
+}
 
-    .mobile-nav-links a:hover {
-        color: var(--secondary-color);
-    }
+.navbar.scrolled ~ .mobile-nav .mobile-nav-links a:hover {
+    color: var(--secondary-color); /* Garde la même couleur au survol */
+}
 
-    .mobile-social-links {
-        display: flex;
-        gap: 1.5rem;
-        margin-bottom: 2rem;
-    }
+   
 
-    .mobile-social-icon {
-        color: white;
-        font-size: 1.5rem;
-        transition: var(--transition-speed);
-    }
+ .mobile-social-links {
+    display: flex;
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+    justify-content: center; /* Pour centrer les icônes */
+}
 
-    .mobile-social-icon:hover {
-        color: var(--secondary-color);
-        transform: translateY(-3px);
-    }
+.mobile-social-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    transition: var(--transition-speed);
+    font-size: 1.2rem;
+    text-decoration: none;
+    color: white;
+}
+
+/* Styles spécifiques pour chaque réseau social */
+.mobile-social-icon.whatsapp-icon {
+    background-color: #25D366;
+}
+
+.mobile-social-icon.facebook-icon {
+    background-color: #3b5998;
+}
+
+.mobile-social-icon.twitter-icon {
+    background-color: #1DA1F2;
+}
+
+.mobile-social-icon.instagram-icon {
+    background: linear-gradient(45deg, #405DE6, #5851DB, #833AB4, #C13584, #E1306C, #FD1D1D, #F56040, #F77737, #FCAF45, #FFDC80);
+}
+
+.mobile-social-icon.linkedin-icon {
+    background-color: #0077B5;
+}
+
+/* Effet de survol */
+.mobile-social-icon:hover {
+    transform: translateY(-5px);
+}
+
+.navbar.scrolled ~ .mobile-nav .mobile-social-icon {
+    color: white;
+}
+
+/* Conservez les couleurs de fond même en mode scrollé */
+.navbar.scrolled ~ .mobile-nav .mobile-social-icon.whatsapp-icon {
+    background-color: #25D366;
+}
+.navbar.scrolled ~ .mobile-nav .mobile-social-icon.facebook-icon {
+    background-color: #3b5998;
+}
+.navbar.scrolled ~ .mobile-nav .mobile-social-icon.twitter-icon {
+    background-color: #1DA1F2;
+}
+.navbar.scrolled ~ .mobile-nav .mobile-social-icon.instagram-icon {
+    background: linear-gradient(45deg, #405DE6, #5851DB, #833AB4, #C13584, #E1306C, #FD1D1D, #F56040, #F77737, #FCAF45, #FFDC80);
+}
+.navbar.scrolled ~ .mobile-nav .mobile-social-icon.linkedin-icon {
+    background-color: #0077B5;
+}
+
 
     /* Sections */
     section {
