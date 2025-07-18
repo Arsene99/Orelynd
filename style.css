@@ -52,7 +52,7 @@
     }
 
     .navbar.scrolled {
-       background: rgba(255, 255, 255, 0.25); /* Blanc légèrement transparent */
+       background:rgba(255, 255, 255, 0.418); /* Blanc légèrement transparent */
         backdrop-filter: blur(10px);
     }
 
@@ -203,7 +203,7 @@
     animation: slideDown 0.5s ease-out forwards;
 }
 .navbar.scrolled ~ .mobile-nav.active {
-    background: rgba(255, 255, 255, 0.25); /* Même opacité que la navbar */
+    background: rgba(255, 255, 255, 0.418); /* Même opacité que la navbar */
     backdrop-filter: blur(12px);
 }
 
