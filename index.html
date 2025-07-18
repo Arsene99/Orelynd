@@ -292,6 +292,72 @@
         </div>
     </section>
 
+    <section class="contact-form-section" id="contact">
+        <h2 class="section-title fade-in">Contactez-nous</h2>
+        <div class="contact-container fade-in">
+            <div class="contact-intro">
+                <h3>Nous sommes à votre écoute</h3>
+                <p>Vous avez une question, une demande particulière ou besoin d'informations supplémentaires ? Envoyez-nous un message et nous vous répondrons dans les plus brefs délais.</p>
+                <div class="contact-methods">
+                    <div class="contact-method">
+                        <i class="fab fa-whatsapp"></i>
+                        <span>+229 59 17 32 77</span>
+                    </div>
+                    <div class="contact-method">
+                        <i class="fas fa-envelope"></i>
+                        <span>Orelynd@gmail.com</span>
+                    </div>
+                </div>
+            </div>
+            
+            <form class="contact-form" id="contactForm">
+                <div class="form-group contact-method-selector">
+                    <label>Comment souhaitez-vous être contacté ?</label>
+                    <div class="method-options">
+                        <div class="method-option active" data-method="whatsapp">
+                            <i class="fab fa-whatsapp"></i>
+                            <span>WhatsApp</span>
+                        </div>
+                        <div class="method-option" data-method="email">
+                            <i class="fas fa-envelope"></i>
+                            <span>Email</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="form-group" id="whatsapp-fields">
+                    <label for="whatsapp-number">Votre numéro WhatsApp</label>
+                    <input type="tel" id="whatsapp-number" placeholder="Ex: +229 59 17 32 77" required>
+                </div>
+                
+                <div class="form-group" id="email-fields" style="display: none;">
+                    <label for="email">Votre adresse email</label>
+                    <input type="email" id="email" placeholder="Ex: votrenom@exemple.com">
+                </div>
+                
+                <div class="form-group">
+                    <label for="name">Votre nom complet</label>
+                    <input type="text" id="name" placeholder="Ex: Jean Dupont" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="subject">Sujet</label>
+                    <input type="text" id="subject" placeholder="Ex: Demande d'information sur un produit" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="message">Votre message</label>
+                    <textarea id="message" rows="5" placeholder="Décrivez votre demande en détail..." required></textarea>
+                </div>
+                
+                <button type="submit" class="submit-btn">
+                    <span id="submit-text">Envoyer via WhatsApp</span>
+                    <i class="fas fa-paper-plane"></i>
+                </button>
+            </form>
+        </div>
+    </section>
+
     <footer>
         <div class="footer-content">
             <div class="footer-column">

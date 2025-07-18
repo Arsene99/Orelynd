@@ -117,3 +117,96 @@ const whatsappManager = {
     }
 };
 whatsappManager.init();
+
+// Gestion du formulaire de contact
+const contactForm = {
+    init() {
+        this.methodOptions = document.querySelectorAll('.method-option');
+        this.whatsappFields = document.getElementById('whatsapp-fields');
+        this.emailFields = document.getElementById('email-fields');
+        this.submitText = document.getElementById('submit-text');
+        this.contactForm = document.getElementById('contactForm');
+        
+        // Gestion du changement de méthode de contact
+        this.methodOptions.forEach(option => {
+            option.addEventListener('click', () => this.switchContactMethod(option));
+        });
+        
+        // Gestion de la soumission du formulaire
+        this.contactForm.addEventListener('submit', (e) => this.handleSubmit(e));
+    },
+    
+    switchContactMethod(selectedOption) {
+        // Mettre à jour l'affichage des options
+        this.methodOptions.forEach(option => {
+            option.classList.remove('active');
+        });
+        selectedOption.classList.add('active');
+        
+        const method = selectedOption.dataset.method;
+        
+        // Afficher les champs appropriés
+        if (method === 'whatsapp') {
+            this.whatsappFields.style.display = 'block';
+            this.emailFields.style.display = 'none';
+            this.submitText.textContent = 'Envoyer via WhatsApp';
+        } else {
+            this.whatsappFields.style.display = 'none';
+            this.emailFields.style.display = 'block';
+            this.submitText.textContent = 'Envoyer par Email';
+        }
+    },
+    
+    handleSubmit(e) {
+        e.preventDefault();
+        
+        // Récupérer les données du formulaire
+        const method = document.querySelector('.method-option.active').dataset.method;
+        const name = document.getElementById('name').value;
+        const subject = document.getElementById('subject').value;
+        const message = document.getElementById('message').value;
+        
+        if (method === 'whatsapp') {
+            const phoneNumber = document.getElementById('whatsapp-number').value;
+            this.sendWhatsAppMessage(phoneNumber, name, subject, message);
+        } else {
+            const email = document.getElementById('email').value;
+            this.sendEmail(name, email, subject, message);
+        }
+    },
+    
+    sendWhatsAppMessage(phone, name, subject, message) {
+        // Nettoyer le numéro de téléphone (supprimer les espaces et caractères spéciaux)
+        const cleanedPhone = phone.replace(/\D/g, '');
+        
+        // Créer le message
+        const fullMessage = `Bonjour Orelynd,\n\nJe suis ${name}.\n\nSujet: ${subject}\n\nMessage: ${message}\n\nMerci de me recontacter.`;
+        
+        // Ouvrir WhatsApp avec le message pré-rempli
+        window.open(`https://wa.me/${cleanedPhone}?text=${encodeURIComponent(fullMessage)}`, '_blank');
+        
+        // Réinitialiser le formulaire
+        this.contactForm.reset();
+        
+        // Afficher un message de confirmation (vous pourriez ajouter une notification plus élaborée)
+        alert('Vous allez être redirigé vers WhatsApp pour envoyer votre message.');
+    },
+    
+    sendEmail(name, email, subject, message) {
+        // Créer le lien mailto avec les informations pré-remplies
+        const mailtoLink = `mailto:Orelynd@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(
+            `Nom: ${name}\nEmail: ${email}\n\nMessage:\n${message}`
+        )}`;
+        
+        // Ouvrir le client de messagerie par défaut
+        window.location.href = mailtoLink;
+        
+        // Réinitialiser le formulaire
+        this.contactForm.reset();
+    }
+};
+
+// Initialiser le formulaire de contact lorsque le DOM est chargé
+document.addEventListener('DOMContentLoaded', () => {
+    contactForm.init();
+});
