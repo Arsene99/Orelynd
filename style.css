@@ -26,6 +26,7 @@
         background-color: var(--background-color);
         color: var(--text-color);
         line-height: 1.6;
+        -webkit-tap-highlight-color: transparent;
     }
 
     /* Header Styles */
@@ -901,6 +902,9 @@
 
     .twitter-icon {
         background-color: #1DA1F2;
+    }
+    .x-icon {
+        background-color: black;
     }
 
     .instagram-icon {
